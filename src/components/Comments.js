@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = () => {
+const Comments = () => {
     return ( <div>
-      
+        
         </div> );
 };
 
-export default App;
+export default Comments;
