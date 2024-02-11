@@ -8,7 +8,7 @@ import Comments from "./Comments";
 
 const CommentsContainer = () => {
 
-    const [comments, setComments]= useState([]);
+    const [comments, setComments]= useState([])
 
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const CommentsContainer = () => {
     },[]);
 
     return ( <div>
-        <ComForm/>
+        <ComForm setComments={setComments} />
         <br/>
         <Comments comments ={comments}/>
         </div> );
