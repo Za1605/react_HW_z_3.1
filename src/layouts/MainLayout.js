@@ -2,10 +2,13 @@ import React from 'react';
 import {Outlet} from "react-router-dom";
 
 const MainLayout = () => {
-    return ( <div>
+    return (
+        <div>
+            <Outlet/>
                MainLayout
-               <Outlet/>
-        </div> );
+
+        </div>
+    );
 };
 
-export default MainLayout;
+export {MainLayout};
