@@ -1,8 +1,13 @@
 import React from 'react';
 
+
+import Todos from "../components/TodosContainer/Todos";
+
 const TodosPage = () => {
-    return ( <div>
-        todos
+    return (
+        <div>
+            <Todos/>
+
         </div> );
 };
 
