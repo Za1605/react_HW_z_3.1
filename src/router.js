@@ -8,28 +8,28 @@ import TodosPage from "./pages/TodosPage";
 import React from "react";
 import PostPage from "./pages/PostPage";
 
-const router = createBrowserRouter([
-    {
-        path:'', element: <MainLayout/>, children:[{
-            index:true, element:<Navigate to={'todos'}/>
-        },
+const router = createBrowserRouter([{
+    path:'',element:<MainLayout/>,children:[
+        {
+        index:true,element:<Navigate to={'albums'}/>
+    },
+        {
+        path:'albums',element:<AlbumsPage/>
 
-            {
-                path:'albums', element:<AlbumsPage/>
-            },
-            {
-                path: 'comments', element:<CommentsPage/>,children:[
-                    {
-                        path:'post', element:<PostPage/>
-                    },
-                    ]
-            },
-            {
-                path:'todos', element:<TodosPage/>
-            }
+    },
+        {
+        path:'todos',element:<TodosPage/>
+    },
+        {
+        path:'comments',element:<CommentsPage/>,children:[{
+            path:'post',element:<PostPage/>
+        }
+
         ]
-    }
-    ]);
+    }]
+}
+    ])
+
 export {
     router
 };
